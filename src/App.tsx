@@ -1,20 +1,11 @@
-import { useState } from "react";
-import Greating from "./Greating"
-import Form from "./components/form"
-import NewButton from "./components/Newbutton";
-import Card from "./components/Card";
-
+import Nave from "./components/nave"
 function App() {
-  const [visible, setvisible] = useState(false);
-  
   return (
     <>
-      <Card/>
-      <h1><Greating great="Hi people"/></h1><br />
-      {visible && (
-        <Form  onclose={() => setvisible(false)}></Form>
-      )}
-      <NewButton onclick={() => setvisible(true)} />
+      <div id="header">
+          <h1 id="logo">Design Gallery</h1>
+          <Nave></Nave>
+      </div>
     </>
   )
 }

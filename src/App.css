@@ -2,63 +2,37 @@
 body{
     margin: 20px;
     background-color: #3f3f3f;
-    font: medium;
-    font-family: monospace;
+    /* font: medium;
+    font-family: monospace; */
 }
 
-h1{
-    color: rgb(57, 226, 57);
-    justify-content: center;
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+#logo{
+    color: #00c41d;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav{
     display: flex;
 }
 
-.ll{
-    margin-left: 45%;
+a{
+    text-decoration: none;
+    color: rgb(240, 240, 240);
 }
 
-.alert{
-    width: 60%;
-    justify-content: center;
-    display: flex;
+a:hover{
+    color: rgb(111, 111, 111);
 }
 
-.alert-success{
-    display: flex;
-}
-
-form{
-    padding: 20px;
-    width: 70%;
-    border-radius: 10px;
-    background-color: #F2F2F2;
-    margin-bottom: 20px;
-    margin-left: 15%;
-    box-shadow: 10px 0 15px rgba(0, 0, 0, 0.2), -10px 0 15px rgba(0, 0, 0, 0.2);
-}
-.form-text{
-    font-size: x-small;
-}
-input{
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 20px;
-    padding-right: 20px ;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: 0px;
-    margin-right: 0px;
-    border:1px solid RGB(204,204,204);
-}
-input[type=submit]{
-    background-color: RGB(76,175,80);
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-}
-input[type=submit]:hover{
-    cursor: pointer;
-    background-color:  RGB(69,160,73);
-
+a::after{
+    color: rgb(31, 31, 31);
 }
