@@ -1,10 +1,10 @@
+import myImage from '../assets/room.png'
 
 function Card() {
   return (
-    <div>
-        <p>jjj</p>
-        <img src="../assets/room.png" alt="" /> 
-    </div>
+    <>
+        <img className="image" src={myImage} alt="" /> 
+    </>
   )
 }
 
