@@ -1,4 +1,4 @@
-import myImage from '../assets/room.png'
+import myImage from '../assets/sss.png'
 
 function Card() {
   return (

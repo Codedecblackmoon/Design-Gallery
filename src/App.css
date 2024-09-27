@@ -3,15 +3,9 @@ body{
     margin: 0px;
     background-color: #3f3f3f;
     height: 100vh;
-    display: flex; /* Enable flexbox */
+    display: flex; 
     align-items: center; 
     justify-content: center; 
-    /* height: 100vh; 
-    display: grid; 
-    place-items: center;  */
-    
-    /* font: medium;
-    font-family: monospace; */
 }
 
 #header{
@@ -22,6 +16,9 @@ body{
     padding: 10px;
 }
 
+.btn{
+    background-color: #00c41d;
+}
 #logo{
     color: #00c41d;
     font-family: "Anton", sans-serif;
@@ -78,7 +75,7 @@ display: flex;
     height: 400px;
     border-radius: 20px;
     margin: 10px;
-    box-shadow: 0 4px 15px rgba(122, 122, 122, 0.2);
+    /* box-shadow: 0 4px 15px rgba(122, 122, 122, 0.2); */
 }
 
 .image:hover{

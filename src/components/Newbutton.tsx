@@ -11,7 +11,7 @@
 
   function NewButton() {
     return (
-      <button type="button" className="btn btn-success ll">
+      <button type="button"  className="btn btn-success ll">
         Get Started
       </button>
     );

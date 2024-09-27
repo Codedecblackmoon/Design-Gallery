@@ -1,6 +1,7 @@
 import Nave from "./components/Nave"
 import Intro from "./components/Intro"
 import Card from "./components/Card"
+import Footer_u from "./components/Footer_u"
 
 Nave
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Intro></Intro>
         <Card></Card>
       </div>
+      <Footer_u />
     </>
   )
 }
