@@ -1,11 +1,18 @@
 
 body{
     margin: 0px;
-    background-color: #3f3f3f;
     /* height: 100vh; */
     display: flex; 
     align-items: center; 
-    justify-content: center; 
+    justify-content: center;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/po.png') no-repeat center center/cover;
+    background-color: #3f3f3f;
+    /* overflow: hidden; */
+
+}
+
+#email, #tel{
+    color: #9c9c9c;
 }
 
 #header{
@@ -14,6 +21,7 @@ body{
     justify-content: space-between;
     align-items: center; 
     padding: 10px;
+    /* gap: 200px; */
 }
 
 .btn{
@@ -26,16 +34,16 @@ body{
     font-style: normal;
 }
 
-a{
+#a{
     text-decoration: none;
     color: rgb(240, 240, 240);
 }
 
-a:hover{
+#a:hover{
     color: rgb(111, 111, 111);
 }
 
-a::after{
+#a::after{
     color: rgb(236, 236, 236);
 }
 
@@ -83,9 +91,9 @@ display: flex;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.349);
 }
 
-#homepage{
+.homepage{
     max-width: 1100px;
-    margin-top: 50px;
+    margin: auto;
     padding-top: 10px;
     display: flex;
     flex-direction: row;
@@ -94,11 +102,17 @@ display: flex;
     padding: 10px;
     /* gap: 30px; */
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     padding: 20px;           
     margin: 20px;         
-    backdrop-filter: blur(100px);
-    background: rgba(26, 25, 25, 0.3);
+}
+
+.glass{
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(26, 25, 25, 0.3), rgba(26, 25, 25, 0));
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgb(60, 60, 60);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.394);
+
 }
 
 #media{
