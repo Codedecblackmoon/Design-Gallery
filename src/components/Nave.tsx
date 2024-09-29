@@ -9,7 +9,7 @@ const Nave: React.FC = () => {
             <ul>
               <li><Link id="a" to="/">Home</Link></li>
               <li><Link id="a" to="/about">About</Link></li>
-              <li><Link id="a" to="/">Get Started</Link></li>
+              <li><Link id="a" to="/getstarted">Get Started</Link></li>
               <li><Link id="a" to="/">Gallery</Link></li>
               {/* <link rel="stylesheet" href="" />
                 <li><a to="/" href="#Home">Home</a></li> */}
