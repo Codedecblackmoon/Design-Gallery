@@ -1,9 +1,11 @@
-import myImage from '../assets/uuu.png'
+interface props {
+  images: string;
+}
 
-function Card() {
+function Card({images}:props) {
   return (
     <>
-        <img className="image" src={myImage} alt="" /> 
+        <img className="image" src={images} alt="" /> 
     </>
   )
 }
