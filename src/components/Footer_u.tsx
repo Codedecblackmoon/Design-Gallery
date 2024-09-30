@@ -5,7 +5,7 @@ import myImage4 from "../assets/github-icon-white-2.png";
 function footer() {
   return (
     <>
-      <footer>
+      <footer className="footer">
         <div id="media">
           <a href="https://www.instagram.com/gideon.l2">
             <img id="media_image" src={myImage1} alt="" />

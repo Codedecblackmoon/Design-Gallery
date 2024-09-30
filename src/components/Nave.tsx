@@ -1,23 +1,17 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Nave: React.FC = () => {
   return (
     <>
         <nav id="navbar">
             <ul>
-              <li><Link id="a" to="/">Home</Link></li>
-              <li><Link id="a" to="/about">About</Link></li>
-              <li><Link id="a" to="/getstarted">Get Started</Link></li>
-              <li><Link id="a" to="/">Gallery</Link></li>
-              {/* <link rel="stylesheet" href="" />
-                <li><a to="/" href="#Home">Home</a></li> */}
-                {/* <li><a href="#Abou">About</a></li>
-                <li><a href="#Get Started">Get Started</a></li>
-                <li><a href="#Info">Info</a></li> */}
+              <li><NavLink   to="/home" className="active-link a"  >Home</NavLink></li>
+              <li><NavLink className="active-link a" to="/about">About</NavLink></li>
+              <li><NavLink className="active-link a" to="/getstarted">Get Started</NavLink></li>
+              <li><NavLink className="active-link a" to="/">Gallery</NavLink></li>
             </ul>
-            
         </nav>
     </>
   )

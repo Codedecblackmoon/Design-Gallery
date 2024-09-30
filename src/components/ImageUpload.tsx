@@ -11,43 +11,43 @@ const ImageUpload: React.FC = () => {
       const url = URL.createObjectURL(file);
       setImageURL(url);
     }
-  };
+};
 
-  const handleDownload = () => {
-    if (image) {
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(image);
-      link.download = image.name;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-  };
+const handleDownload = () => {
+  if (image) {
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(image);
+    link.download = image.name;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+};
 
-  const handleShareLink = () => {
-    if (imageURL) {
-      navigator.clipboard.writeText(imageURL).then(() => {
-        alert('Link copied to clipboard!');
-      });
-    }
-  };
+const handleShareLink = () => {
+  if (imageURL) {
+    navigator.clipboard.writeText(imageURL).then(() => {
+      alert('Link copied to clipboard!');
+    });
+  }
+};
 
-  return (
-    <div>
-      <h2>Upload Image</h2>
-      <input type="file" accept="image/*" onChange={handleImageChange} />
-      {image && (
+return (
+  <div>
+    <h2>Upload Image</h2>
+    <input type="file" accept="image/*" onChange={handleImageChange} />
+    {image && (
+      <div>
+        <h3>Uploaded Image:</h3>
+        <img src={URL.createObjectURL(image)} alt="Uploaded" style={{ width: '200px' }} />
         <div>
-          <h3>Uploaded Image:</h3>
-          <img src={URL.createObjectURL(image)} alt="Uploaded" style={{ width: '200px' }} />
-          <div>
-            <button onClick={handleDownload}>Download</button>
-            <button onClick={handleShareLink}>Share Link</button>
-          </div>
+          <button onClick={handleDownload}>Download</button>
+          <button onClick={handleShareLink}>Share Link</button>
         </div>
-      )}
-    </div>
-  );
+      </div>
+    )}
+  </div>
+);
 };
 
 export default ImageUpload;

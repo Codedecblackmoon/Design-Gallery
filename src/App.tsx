@@ -9,17 +9,23 @@ import Footer_u from "./components/Footer_u"
 const App: React.FC = () => {
   return (
     <Router>
-      <div id="header">
-          <h1 id="logo">Design Gallery</h1>
-          <Nave></Nave>
+      <div className="app-container">
+        <div className="content">
+          <div id="header">
+            <h1 id="logo">Design Gallery</h1>
+            <Nave></Nave>
+          </div>
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/getstarted" element={<  Getstarted />} />
+          </Routes>
+        </div>
+        <Footer_u />
       </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/getstarted" element={<  Getstarted />} />
-      </Routes>
-      <Footer_u />
     </Router>
+      
+      
   );
 };
 
