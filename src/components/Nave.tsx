@@ -7,10 +7,10 @@ const Nave: React.FC = () => {
     <>
         <nav id="navbar">
             <ul>
-              <li><NavLink   to="/home" className="active-link a"  >Home</NavLink></li>
-              <li><NavLink className="active-link a" to="/about">About</NavLink></li>
-              <li><NavLink className="active-link a" to="/getstarted">Get Started</NavLink></li>
-              <li><NavLink className="active-link a" to="/">Gallery</NavLink></li>
+              <li><NavLink className="a" to="/" >Home</NavLink></li>
+              <li><NavLink className="a" to="/about">About</NavLink></li>
+              <li><NavLink className="a" to="/getstarted">Get Started</NavLink></li>
+              <li><NavLink className="a" to="/Gallery">Gallery</NavLink></li>
             </ul>
         </nav>
     </>
