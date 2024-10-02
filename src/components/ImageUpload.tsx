@@ -3,6 +3,7 @@ import React, { useCallback, useState } from 'react';
 import axios from 'axios';
 
 const ImageUpload: React.FC = () => {
+  
   const [dragging, setDragging] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -57,6 +58,7 @@ const ImageUpload: React.FC = () => {
   };
 
   return (
+
     <div
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
@@ -69,6 +71,12 @@ const ImageUpload: React.FC = () => {
         textAlign: 'center',
       }}
     >
+    <div>
+        <form action="/action_page.php">
+            <input type="file" id="myFile" name="filename"/>
+            <input type="submit"/>
+        </form>
+    </div>
       <p>Drag & drop images (PNG, JPG) here</p>
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
