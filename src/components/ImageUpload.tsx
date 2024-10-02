@@ -39,6 +39,7 @@ const ImageUpload: React.FC = () => {
     }
 
     if (formData.has('images')) {
+      try {
         await axios.post('http://localhost:5174/getstarted', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
@@ -46,12 +47,10 @@ const ImageUpload: React.FC = () => {
         });
         alert('Files uploaded successfully.');
         setError(null); // Reset error
-    //   try {
-        
-    //   } catch (err) {
-    //     setError('Error uploading files.');
-    //     console.error(err);
-    //   }
+      } catch (err) {
+        setError('Error uploading files.');
+        console.error(err);
+      }
     } else {
       setError('No valid images to upload.');
     }
@@ -59,10 +58,10 @@ const ImageUpload: React.FC = () => {
 
   return (
     <>
-        <div>
+        <div id='CF'>
             <form action="/action_page.php">
-                <input type="file" id="myFile" name="filename"/>
-                <input type="submit"/>
+                <input className="btn_1" type="file" id="myFile" name="filename"/>
+                <input className="btn_2" type="submit"/>
             </form>
         </div>
         <div
