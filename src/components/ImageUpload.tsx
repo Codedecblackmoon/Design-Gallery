@@ -1,53 +1,79 @@
-import React, { useState } from 'react';
+// src/ImageUploader.tsx
+import React, { useCallback, useState } from 'react';
+import axios from 'axios';
 
 const ImageUpload: React.FC = () => {
-  const [image, setImage] = useState<File | null>(null);
-  const [imageURL, setImageURL] = useState<string | null>(null);
+  const [dragging, setDragging] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      setImage(file);
-      const url = URL.createObjectURL(file);
-      setImageURL(url);
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setDragging(true);
+  };
+
+  const handleDragLeave = () => {
+    setDragging(false);
+  };
+
+  const handleDrop = useCallback(async (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setDragging(false);
+    
+    const files = e.dataTransfer.files;
+    await handleFiles(files);
+  }, []);
+
+  const handleFiles = async (files: FileList) => {
+    const formData = new FormData();
+    const validImageTypes = ['image/png', 'image/jpeg'];
+
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      if (validImageTypes.includes(file.type)) {
+        formData.append('images', file);
+      } else {
+        setError('Only PNG and JPG files are allowed.');
+        return;
+      }
     }
-};
 
-const handleDownload = () => {
-  if (image) {
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(image);
-    link.download = image.name;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-};
+    if (formData.has('images')) {
+        await axios.post('http://localhost:5174/getstarted', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+        alert('Files uploaded successfully.');
+        setError(null); // Reset error
+    //   try {
+        
+    //   } catch (err) {
+    //     setError('Error uploading files.');
+    //     console.error(err);
+    //   }
+    } else {
+      setError('No valid images to upload.');
+    }
+  };
 
-const handleShareLink = () => {
-  if (imageURL) {
-    navigator.clipboard.writeText(imageURL).then(() => {
-      alert('Link copied to clipboard!');
-    });
-  }
-};
-
-return (
-  <div>
-    <h2>Upload Image</h2>
-    <input type="file" accept="image/*" onChange={handleImageChange} />
-    {image && (
-      <div>
-        <h3>Uploaded Image:</h3>
-        <img src={URL.createObjectURL(image)} alt="Uploaded" style={{ width: '200px' }} />
-        <div>
-          <button onClick={handleDownload}>Download</button>
-          <button onClick={handleShareLink}>Share Link</button>
-        </div>
-      </div>
-    )}
-  </div>
-);
+  return (
+    <div
+      onDragOver={handleDragOver}
+      onDragLeave={handleDragLeave}
+      onDrop={handleDrop}
+      style={{
+        border: dragging ? '2px solid #4caf50' : '2px dashed #ccc',
+        padding: '20px',
+        width: '400px',
+        margin: '20px auto',
+        textAlign: 'center',
+      }}
+    >
+      <p>Drag & drop images (PNG, JPG) here</p>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+    </div>
+  );
 };
 
 export default ImageUpload;
+
