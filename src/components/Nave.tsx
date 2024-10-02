@@ -12,7 +12,6 @@ const Nave: React.FC = () => {
               <li><NavLink className="a" to="/getstarted">Get Started</NavLink></li>
               <li><NavLink className="a" to="/Gallery">Gallery</NavLink></li>
             </ul> 
-{/*           jkl;\'''' */}
         </nav>
     </>
   )
