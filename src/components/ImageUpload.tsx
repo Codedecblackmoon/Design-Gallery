@@ -58,28 +58,31 @@ const ImageUpload: React.FC = () => {
   };
 
   return (
-
-    <div
-      onDragOver={handleDragOver}
-      onDragLeave={handleDragLeave}
-      onDrop={handleDrop}
-      style={{
-        border: dragging ? '2px solid #4caf50' : '2px dashed #ccc',
-        padding: '20px',
-        width: '400px',
-        margin: '20px auto',
-        textAlign: 'center',
-      }}
-    >
-    <div>
-        <form action="/action_page.php">
-            <input type="file" id="myFile" name="filename"/>
-            <input type="submit"/>
-        </form>
-    </div>
-      <p>Drag & drop images (PNG, JPG) here</p>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-    </div>
+    <>
+        <div>
+            <form action="/action_page.php">
+                <input type="file" id="myFile" name="filename"/>
+                <input type="submit"/>
+            </form>
+        </div>
+        <div
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+            style={{
+                border: dragging ? '2px solid #4caf50' : '2px dashed #ccc',
+                padding: '20px',
+                width: '400px',
+                margin: '20px auto',
+                textAlign: 'center',
+            }}
+            >
+            
+            <p>Drag & drop images (PNG, JPG) here</p>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+        </div>
+    </>
+    
   );
 };
 
