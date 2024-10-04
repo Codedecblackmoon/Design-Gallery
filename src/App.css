@@ -162,7 +162,7 @@ display: flex;
     margin: 40px;
     padding-top: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center; 
     padding: 10px;
