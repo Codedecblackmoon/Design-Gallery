@@ -134,7 +134,7 @@ display: flex;
 }
 
 .image_g{
-    height: 250px;
+    height: 200px;
     border-radius: 20px;
     margin: 10px;
 }
@@ -187,7 +187,9 @@ display: flex;
     border-right: 1px solid rgb(38, 38, 38);
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.394);
-
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
 }
 
 .glassr{
@@ -200,7 +202,6 @@ display: flex;
     border-right: 1px solid rgb(38, 38, 38);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.394);
     height: 400px;
-
 }
 
 #media{
@@ -233,10 +234,12 @@ display: flex;
     .homepage{
         flex-direction: column; 
         align-items: center;
+        margin: 10px;
     }
     .homepage1{
         flex-direction: column; 
         align-items: center;
+        margin: 10px;
     }
 
     #navbar {
@@ -248,10 +251,12 @@ display: flex;
     .homepage{
         flex-direction: column; 
         align-items: center;
+        margin: 10px;
     }
     .homepage1{
         flex-direction: column; 
         align-items: center;
+        margin: 10px;
     }
     .image{
         
