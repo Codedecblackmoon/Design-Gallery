@@ -17,9 +17,9 @@ import image_13 from "./assets/Gallery/room.png"
 
 function Gallery() {
   return (
-    <div className="glass">
+    <div className="glass_g">
       <h1 className="int">Gallery</h1>
-      <div className="hamepage_1">
+      <div className="hamepage">
         <Imagedisplay image={image_1}></Imagedisplay>
         <Imagedisplay image={image_2}></Imagedisplay>
         <Imagedisplay image={image_3}></Imagedisplay>
