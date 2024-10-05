@@ -177,6 +177,17 @@ display: flex;
     margin: 20px;         
 }
 
+.int{
+    color: #00c41d;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-family: "Anton", sans-serif;
+    font-weight: 200px;
+    font-style: normal;
+    font-size: 40px;
+}
+
 .glass{
     backdrop-filter: blur(10px);
     background: linear-gradient(135deg, rgba(86, 85, 85, 0.3), rgba(94, 91, 91, 0));
