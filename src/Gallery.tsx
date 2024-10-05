@@ -1,8 +1,40 @@
 
+
+import Imagedisplay from "./components/Imagedisplay";
+import image_1 from "./assets/Gallery/20240725_215740.jpg"
+import image_2 from "./assets/Gallery/20240725_215802.jpg"
+import image_3 from "./assets/Gallery/20240725_215822.jpg"
+import image_4 from "./assets/Gallery/20240725_215849.jpg"
+import image_5 from "./assets/Gallery/20240725_220024.jpg"
+import image_6 from "./assets/Gallery/C2.png"
+import image_7 from "./assets/Gallery/CM.png"
+import image_8 from "./assets/Gallery/ISLAND.png"
+import image_9 from "./assets/Gallery/ROME.png"
+import image_10 from "./assets/Gallery/d2.png"
+import image_11 from "./assets/Gallery/dpng.png"
+import image_12 from "./assets/Gallery/google meet.png"
+import image_13 from "./assets/Gallery/room.png"
+
 function Gallery() {
   return (
-    <div>
-      <h1>coming soon</h1>
+    <div className="glass">
+      <h1 className="intro">Gallery</h1>
+      <div className="hamepage_1">
+        <Imagedisplay image={image_1}></Imagedisplay>
+        <Imagedisplay image={image_2}></Imagedisplay>
+        <Imagedisplay image={image_3}></Imagedisplay>
+        <Imagedisplay image={image_4}></Imagedisplay>
+        <Imagedisplay image={image_5}></Imagedisplay>
+        <Imagedisplay image={image_6}></Imagedisplay>
+        <Imagedisplay image={image_7}></Imagedisplay>
+        <Imagedisplay image={image_8}></Imagedisplay>
+        <Imagedisplay image={image_9}></Imagedisplay>
+        <Imagedisplay image={image_10}></Imagedisplay>
+        <Imagedisplay image={image_11}></Imagedisplay>
+        <Imagedisplay image={image_12}></Imagedisplay>
+        <Imagedisplay image={image_13}></Imagedisplay>
+      </div>
+      
     </div>
   );
 }

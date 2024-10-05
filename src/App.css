@@ -123,14 +123,6 @@ p{
     font-size: 30px;
 }
 
-#drop{
-    border:2px solid #4caf50 2px dashed #ccc;
-    padding: 20px;
-    width: 400px;
-    margin: 20px auto;
-    text-align: center;
-}
-
 #navbar {
 display: flex;
 }
@@ -193,6 +185,7 @@ display: flex;
     border-bottom: 1px solid rgb(125, 125, 125);
     border-top: 1px solid rgb(38, 38, 38);
     border-right: 1px solid rgb(38, 38, 38);
+    border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.394);
 
 }
