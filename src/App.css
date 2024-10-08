@@ -10,7 +10,10 @@ body{
 }
 #st{
     display: flex;
+    /* flex-direction: row;  */
+    
     justify-content: center;
+
 }
 
 #email, #tel{
@@ -19,13 +22,13 @@ body{
 
 .gallery {
     margin: 10px;
-    float: left;
+    /* float: left; */
     width: 180px;
 }
 
 .gallery img {
     width: 100%;
-    height: auto;
+    height: auto; 
 }
 
 #CF{
@@ -263,7 +266,8 @@ display: flex;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.394);
 }
 .glass_g{
-    max-width: 1800px;
+    max-width: 1700px;
+    height: 600px;
     margin-top: 100px;
     backdrop-filter: blur(10px);
     background: linear-gradient(135deg, rgba(86, 85, 85, 0.3), rgba(94, 91, 91, 0));
@@ -274,10 +278,12 @@ display: flex;
     border-right: 1px solid rgb(38, 38, 38);
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.394);
+    padding: 15px;
 }
 
 .glassr{
     backdrop-filter: blur(10px);
+    width: 700px;
     background: linear-gradient(135deg, rgba(86, 85, 85, 0.3), rgba(94, 91, 91, 0));
     -webkit-backdrop-filter: blur(10px);
     border-left: 1px solid rgb(125, 125, 125);
