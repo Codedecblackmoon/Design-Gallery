@@ -196,21 +196,21 @@ display: flex;
     margin: 10px;
 }
 
-/* .image_g{
+.image_g{
     height: 200px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 10px;
 }
 
 .image_g:hover{
-    border-radius: 30px;
+    border-radius: 15px;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.349);
 }
 
 .image:hover{
     border-radius: 30px;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.349);
-} */
+}
 
 .homepage{
     max-width: 1100px;
