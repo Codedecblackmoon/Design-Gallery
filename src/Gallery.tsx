@@ -19,8 +19,8 @@ function Gallery() {
   return (
     <div className="glass_g">
       <h1 className="int">Gallery</h1>
-      <div className="hamepage">
-        <Imagedisplay image={image_1}></Imagedisplay>
+      <div id="st">
+         <Imagedisplay image={image_1}></Imagedisplay>
         <Imagedisplay image={image_2}></Imagedisplay>
         <Imagedisplay image={image_3}></Imagedisplay>
         <Imagedisplay image={image_4}></Imagedisplay>
@@ -34,7 +34,8 @@ function Gallery() {
         <Imagedisplay image={image_12}></Imagedisplay>
         <Imagedisplay image={image_13}></Imagedisplay>
       </div>
-      
+     
+
     </div>
   );
 }
