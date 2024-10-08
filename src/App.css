@@ -10,8 +10,6 @@ body{
 }
 #st{
     display: flex;
-    /* flex-direction: row;  */
-    
     justify-content: center;
 
 }
@@ -22,7 +20,6 @@ body{
 
 .gallery {
     margin: 10px;
-    /* float: left; */
     width: 180px;
 }
 
@@ -71,11 +68,7 @@ body{
 }
 
 .file-upload-form {
-    /* background-color: white; */
     color: rgb(235, 235, 235);
-    /* padding: 20px; */
-    /* border-radius: 5px; */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .form-group {
