@@ -8,10 +8,10 @@ body{
     background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/po.png') no-repeat center center/cover;
     background-color: #3f3f3f;
 }
+
 #st{
     display: flex;
     justify-content: center;
-
 }
 
 #email, #tel{
@@ -129,6 +129,7 @@ label {
     padding-right: 10px;
     justify-content: center;
 }
+
 #logo{
     color: #00c41d;
     font-family: "Anton", sans-serif;
@@ -258,6 +259,7 @@ display: flex;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.394);
 }
+
 .glass_g{
     max-width: 1700px;
     height: 600px;
@@ -342,7 +344,6 @@ display: flex;
         margin: 10px;
     }
     .image{
-        
         border-radius: 20px;
         margin: 10px;
     }
