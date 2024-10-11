@@ -9,21 +9,10 @@ const Home: React.FC = () => {
       <div className="homepage glass">
         <Intro tit='Why Us'>
           <p>
-          Hello! I’d like to introduce you to Design Gallery, a fantastic
-          platform tailored for graphic designers. It offers a streamlined way
-          to organize and manage your design assets, allowing you to save your
-          images, typography, templates in one convenient location. No more
-          wasting time sifting through folders! With smart tagging and
-          categorization, you can find what you need in an instant, boosting
-          your productivity.
+          Hello! I’d like to introduce you to <strong>Design Gallery</strong>, an incredible platform designed specifically for graphic designers to showcase their work and draw inspiration from others. With <strong>Design Gallery</strong>, you can easily upload your projects, share your creative process.
           <br/>
           <br/>
-          But that’s not all! Design Gallery also enhances collaboration within
-          teams. Its easy sharing features let you present your work to clients
-          or colleagues and receive realtime feedback. Plus, sharing assets
-          across projects ensures consistency in your designs. Using Design
-          Gallery can truly elevate your workflow and help you create stunning
-          designs more efficiently!
+          Not only can you gain visibility for your designs, but you can also find fresh ideas and techniques from peers around the world. Whether you’re seeking feedback or simply looking to inspire others, <strong>Design Gallery</strong> is the perfect space to elevate your creative journey.
           </p>
         </Intro>
         <Card images={myImage}></Card>
