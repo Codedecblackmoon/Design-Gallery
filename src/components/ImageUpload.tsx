@@ -59,9 +59,14 @@ const ImageUpload: React.FC = () => {
   return (
     <>
         <div id='CF'>
-            <form action="/action_page.php">
-                <input className="btn_1" type="file" id="myFile" name="filename"/>
-                <input className="btn_2" type="submit"/>
+            <form action="/action_page.php" className="file-upload-form">
+                <div className="form-group">
+                    {/* <label htmlFor="myFile"></label> */}
+                    <input type="file" id="myFile" name="filename" className="file-input"/>
+                </div>
+                <div className="form-group">
+                    <input type="submit" value="Submit" className="submit-button"/>
+                </div>
             </form>
         </div>
         <div

@@ -9,8 +9,23 @@ body{
     background-color: #3f3f3f;
 }
 
+#st{
+    display: flex;
+    justify-content: center;
+}
+
 #email, #tel{
     color: #9c9c9c;
+}
+
+.gallery {
+    margin: 10px;
+    width: 180px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto; 
 }
 
 #CF{
@@ -52,6 +67,50 @@ body{
     color: azure;
 }
 
+.file-upload-form {
+    color: rgb(235, 235, 235);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.file-input {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.file-input::-webkit-file-upload-button {
+    background-color: #00c41d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.file-input::-webkit-file-upload-button:hover {
+    background-color: rgb(0, 139, 0);
+}
+
+.submit-button {
+    background-color: #00c41d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-button:hover {
+    background-color: rgb(1, 136, 1);
+}
+
 #myFile{
     display: flex;
     justify-content: center;
@@ -70,6 +129,7 @@ body{
     padding-right: 10px;
     justify-content: center;
 }
+
 #logo{
     color: #00c41d;
     font-family: "Anton", sans-serif;
@@ -135,12 +195,12 @@ display: flex;
 
 .image_g{
     height: 200px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 10px;
 }
 
 .image_g:hover{
-    border-radius: 30px;
+    border-radius: 15px;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.349);
 }
 
@@ -199,8 +259,10 @@ display: flex;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.394);
 }
+
 .glass_g{
-    max-width: 1800px;
+    max-width: 1700px;
+    height: 600px;
     margin-top: 100px;
     backdrop-filter: blur(10px);
     background: linear-gradient(135deg, rgba(86, 85, 85, 0.3), rgba(94, 91, 91, 0));
@@ -211,10 +273,12 @@ display: flex;
     border-right: 1px solid rgb(38, 38, 38);
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.394);
+    padding: 15px;
 }
 
 .glassr{
     backdrop-filter: blur(10px);
+    width: 700px;
     background: linear-gradient(135deg, rgba(86, 85, 85, 0.3), rgba(94, 91, 91, 0));
     -webkit-backdrop-filter: blur(10px);
     border-left: 1px solid rgb(125, 125, 125);
@@ -280,7 +344,6 @@ display: flex;
         margin: 10px;
     }
     .image{
-        
         border-radius: 20px;
         margin: 10px;
     }

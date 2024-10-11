@@ -5,8 +5,8 @@ interface props{
 
 function Imagedisplay({image}:props) {
   return (
-    <div>
-        <img className="image_g" src={image} alt="" />
+    <div className="gallery">
+        <img width="600" height="400" className="image_g" src={image} alt="" />
     </div>
   )
 }
