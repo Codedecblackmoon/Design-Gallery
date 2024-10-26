@@ -1,9 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+    // "target": "ES2022",
     "lib": ["ES2023"],
-    "module": "ESNext",
+    // "module": "ESNext",
+    // "skipLibCheck": true,
+
+    "target": "es5",
+    "module": "esnext",
+    "jsx": "react-jsx", // Use "react-jsx" for React 17 and newer
+    "strict": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -13,7 +21,7 @@
     "noEmit": true,
 
     /* Linting */
-    "strict": true,
+    // "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
