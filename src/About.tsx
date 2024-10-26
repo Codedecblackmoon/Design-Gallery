@@ -11,6 +11,7 @@ const About: React.FC = () => {
         <Display tit='About'>
           <p>
 {/*             somther */}
+{/*             another something */}
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium veniam, totam libero pariatur ex, ratione tempore sint deleniti, dolor illo molestiae iste! Eaque dolorum excepturi hic tempore provident similique reiciendis!
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur debitis saepe amet illo doloribus nostrum in ipsam ut doloremque nihil nulla, quis, accusantium nemo! Quas doloribus aut laudantium atque odit.
             <br />
