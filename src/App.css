@@ -301,6 +301,9 @@ display: flex;
 #media_image{
     height: 20px;
 }
+.container{
+    
+}
 
 #content{
     margin-top: 10px;

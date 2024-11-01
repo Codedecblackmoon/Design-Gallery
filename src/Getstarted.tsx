@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageUpload from './components/ImageUpload';
+import ImageUpload from './components/upload';
 // import ImageUpload from './components/ImageUpload';
 
 const Getstarted: React.FC = () => {
