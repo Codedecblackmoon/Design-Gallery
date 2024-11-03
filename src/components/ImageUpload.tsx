@@ -1,94 +1,55 @@
-// src/ImageUploader.tsx
-import React, { useCallback, useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 
-const ImageUpload: React.FC = () => {
-  
-  const [dragging, setDragging] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+const UploadDragDrop: React.FC = () => {
+    const [dragging, setDragging] = useState(false);
 
-  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setDragging(true);
-  };
+    const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
+        event.preventDefault();
+        setDragging(true);
+    };
 
-  const handleDragLeave = () => {
-    setDragging(false);
-  };
+    const handleDragLeave = () => {
+        setDragging(false);
+    };
 
-  const handleDrop = useCallback(async (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setDragging(false);
-    
-    const files = e.dataTransfer.files;
-    await handleFiles(files);
-  }, []);
+    const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
+        event.preventDefault();
+        setDragging(false);
+        const files = event.dataTransfer.files;
+        handleFiles(files);
+    };
 
-  const handleFiles = async (files: FileList) => {
-    const formData = new FormData();
-    const validImageTypes = ['image/png', 'image/jpeg'];
-
-    for (let i = 0; i < files.length; i++) {
-      const file = files[i];
-      if (validImageTypes.includes(file.type)) {
-        formData.append('images', file);
-      } else {
-        setError('Only PNG and JPG files are allowed.');
-        return;
-      }
-    }
-
-    if (formData.has('images')) {
-      try {
-        await axios.post('http://localhost:5174/getstarted', formData, {
-          headers: {
-            'Content-Type': 'multipart/form-data',
-          },
+    const handleFiles = (files: FileList) => {
+        Array.from(files).forEach((file) => {
+            console.log('Uploaded file:', file.name);
         });
-        alert('Files uploaded successfully.');
-        setError(null); // Reset error
-      } catch (err) {
-        setError('Error uploading files.');
-        console.error(err);
-      }
-    } else {
-      setError('No valid images to upload.');
-    }
-  };
+    };
 
-  return (
-    <>
-        <div id='CF'>
-            <form action="/action_page.php" className="file-upload-form">
-                <div className="form-group">
-                    {/* <label htmlFor="myFile"></label> */}
-                    <input type="file" id="myFile" name="filename" className="file-input"/>
-                </div>
-                <div className="form-group">
-                    <input type="submit" value="Submit" className="submit-button"/>
-                </div>
-            </form>
-        </div>
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const files = event.target.files;
+        if (files) handleFiles(files);
+    };
+
+    return (
         <div
+            className={`dropzone ${dragging ? 'drag-over' : ''}`}
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
-            style={{
-                border: dragging ? '2px solid #4caf50' : '2px dashed #ccc',
-                padding: '20px',
-                width: '400px',
-                margin: '20px auto',
-                textAlign: 'center',
-            }}
-            >
-            
-            <p>Drag & drop images (PNG, JPG) here</p>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
+            onClick={() => document.getElementById('fileInput')?.click()}
+        >
+            <h5>Drag & drop files here or click to upload</h5>
+            <input
+                type="file"
+                id="fileInput"
+                style={{ display: 'none' }}
+                onChange={handleInputChange}
+                multiple
+            />
         </div>
-    </>
-    
-  );
+    );
 };
 
-export default ImageUpload;
+export default UploadDragDrop;
+
 

@@ -9,13 +9,14 @@ body{
     background-color: #3f3f3f;
 }
 
-#st{
-    display: flex;
-    justify-content: center;
-}
 
 #email, #tel{
     color: #9c9c9c;
+}
+
+#st{
+    display: flex;
+    flex-direction: row;
 }
 
 .gallery {
@@ -27,6 +28,29 @@ body{
     width: 100%;
     height: auto; 
 }
+
+.dropzone {
+    width: 300px;
+    height: 150px;
+    border: 1px dotted #00c41d;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(245, 245, 245);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dropzone h5{
+    margin: 20px;
+}
+
+.dropzone.drag-over {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
 
 #CF{
     display: flex;
@@ -213,6 +237,7 @@ display: flex;
     max-width: 1100px;
     margin: 40px;
     padding-top: 10px;
+    /* display: flex; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -221,6 +246,21 @@ display: flex;
     border-radius: 20px;
     padding: 20px;           
     margin-top: 40px;         
+}
+
+#jjj{
+    max-width: 1100px;
+    margin: 40px;
+    padding-top: 10px;
+    /* display: flex; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px;
+    border-radius: 20px;
+    padding: 20px;           
+    margin-top: 40px;;
 }
 
 .homepage1{
@@ -260,8 +300,33 @@ display: flex;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.394);
 }
 
+.glass_up{
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(86, 85, 85, 0.3), rgba(94, 91, 91, 0));
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 1px solid rgb(125, 125, 125);
+    border-bottom: 1px solid rgb(125, 125, 125);
+    border-top: 1px solid rgb(38, 38, 38);
+    border-right: 1px solid rgb(38, 38, 38);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.394);
+    max-width: 700px;
+    max-height: 700px;
+    padding: 100px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.glass_up #third_tital{
+    margin-bottom: 20px;
+}
+
+
 .glass_g{
-    max-width: 1700px;
+    max-width: 1000px;
     height: 600px;
     margin-top: 100px;
     backdrop-filter: blur(10px);
@@ -300,9 +365,6 @@ display: flex;
 
 #media_image{
     height: 20px;
-}
-.container{
-    
 }
 
 #content{
