@@ -339,7 +339,7 @@ display: flex;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.394);
     padding: 15px;
-}
+} 
 
 .glassr{
     backdrop-filter: blur(10px);
@@ -412,5 +412,13 @@ display: flex;
         border-radius: 20px;
         margin: 10px;
     }
+    .glass_g{
+        min-width: 500px;
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        margin-top: 100px;
+    }
+
 }
   
