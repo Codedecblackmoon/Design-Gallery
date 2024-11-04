@@ -9,6 +9,10 @@ a simple website the allows users craet gallers online and send them to friends 
 .Create gallary
 .Shareing 
 
+Live page
+
+- [Design_Gallery]([https://design-gallery-two.vercel.app/])
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
