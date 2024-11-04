@@ -11,7 +11,7 @@ a simple website the allows users craet gallers online and send them to friends 
 
 Live page
 
-- [Design_Gallery]([https://design-gallery-two.vercel.app/])
+- [@Design_Gallery](https://design-gallery-two.vercel.app/)
 
 Currently, two official plugins are available:
 
