@@ -3,7 +3,7 @@ import Card from "./components/Card"
 function Other() {
   return (
     <>
-        <Card/>
+        <Card images="Design"/>
     </>
   )
 }
