@@ -20,5 +20,8 @@ Currently, two official plugins are available:
 
 ## images
 
-<img src="./src/assets/Screenshot 2025-01-17 204921.png" alt="App Screenshot" width="400">
+<div align="center">
+  <img src="./src/assets/Screenshot 2025-01-17 204921.png" alt="App Screenshot" width="100">
+</div>
+
 
